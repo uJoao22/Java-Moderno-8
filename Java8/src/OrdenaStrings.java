@@ -22,6 +22,6 @@ public class OrdenaStrings {
 		// Passo 2 - Como o forEach já sabe que ele irá receber um consumer e sabe que este consumer só tem 1 método para 
 		// implementar, posso usar uma expresão lambda para deixar o código mais enxuto
 		// Expressão lambda - Como só tem 1 parametro não preciso informar o tipo e nem colocar os parenteses
-		palavras.forEach(s -> System.out.println(s));
+		palavras.forEach(System.out::println);
 	}
 }
