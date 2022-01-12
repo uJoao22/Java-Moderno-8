@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 
 public class OrdenaStrings {
@@ -10,7 +11,10 @@ public class OrdenaStrings {
 		palavras.add("caelum");
 
 		//Substituindo os ifs pelo método compare da class Integer que faz a mesma função de devolver positivo, negativo ou zero
-		palavras.sort((s1, s2) -> Integer.compare(s1.length(), s2.length()));
+		//palavras.sort((s1, s2) -> Integer.compare(s1.length(), s2.length()));
+		
+		//Usando Method References, comparando as strings e as ordenando
+		palavras.sort(Comparator.comparing(String::length));
 
 		System.out.println(palavras);
 
